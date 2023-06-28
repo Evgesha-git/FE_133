@@ -1,140 +1,88 @@
-let c;
+// let days = prompt('Введите количество дней');
 
-{
-    let a = 5;
-    let b = 6;
-    c = a + b;
-}
+// let years = parseInt(days / 365);
+// days = days % 365;
+// let months = parseInt(days / 31);
+// days %= 31;
+// let weeks = parseInt(days / 7);
+// days %= 7;
+// let hours = days * 24;
+// let minuts = hours * 60;
+// let seconds = minuts * 60;
 
-console.log(c);
+// document.write(`
+//     <span>Количество лет: ${years ? years : 'меньше года'}</span><br />
+//     <span>Количесвто месяцев: ${months ? months : 'меньше месяца'}</span><br />
+//     <span>Количесвтво недель: ${weeks ? weeks : 'меньше недели'}</span><br />
+//     <span>Количесвтво дней: ${days}</span><br />
+//     <span>Часов: ${hours}</span><br />
+//     <span>Минут: ${minuts}</span><br />
+//     <span>Секунд: ${seconds}</span><br />
+// `);
 
-//a + 2 * (x - b) = 16
-let a = 8, b = 3;
+// for (let i = 0; i < 10; i++){
+//     let a = i ** 2;
+//     a /= 3;
+//     a += 12;
+//     console.log(a);
+// }
 
 /**
- * (x - b) = (16 - a) / 2
- * x = ((16 - a) / 2)) + b
+ * Циклы:
+ * for -> for (iterator; условие выхода; изменение итератора)
+ * while -> while (условие выполнения)
+ * do .. while -> do {
+ *  ...
+ * } while(условие выполнения)
  */
 
-let x = ((16 - a) / 2) + b;
+// while(0){
+//     console.log('Выполнение цикла while');
+// }
 
-console.log(x);
+// do {
+//     console.log('Выполнение цикла do..while');
+// } while (0);
 
+// let index = 0
+// for (let index = 0; index < 50; index++) {   
+//     if (index > 40){
+//         break;
+//     }
+//     if (index % 3 === 0){
+//         continue;
+//     }
+//     console.log(index);
+// }
 
-// alert('Первый способ');
-// document.write('Второй способ');
-// console.warn('Третий способ');
+// let summ = 0;
 
-console.log('Сумма переменных a и b \nравна: ' + (a + b));
-console.log(`
-Сумма переменных a и b
-равна: ${a + b}`);
+// while(true){
+//     let num = prompt('Введите число');
+//     if (isNaN(num)){
+//         alert ('Ввели не число');
+//         continue;
+//     }
+//     if( +num === 0 || num === ''){
+//         break;
+//     }
+//     summ += Number(num);
+// }
 
-{
-    let a = 5;
-    a = a + 1;
-    console.log(a);
-    a += 1;
-    console.log(a);
+// console.log(summ);
+
+// for (let i = 1; i < 10; i++){
+//     let s = '';
+//     for (let j = 0; j < i; j++){
+//         s += i;
+//     }
+//     console.log(s);
+// }
+
+let summ = 0;
+
+for (let i = 5; i <= 15; i++){
+    summ += i * 2; // summ = summ + (i * 2)
 }
 
-// let arr = [1, 2, 3, 4];
-
-// document.addEventListener('click', () => void 0);
-
-// [...arr].map();
-
-
-{
-    let a = 1;
-    console.log(a++); //1 -> a = 1 -> a++ -> a - 1 -> a + 1
-    console.log(++a); //3 -> a = 2 -> ++a -> a + 1 -> a - 3
-    console.log(a--); //3
-    console.log(--a); //1
-}
-
-// {
-//     let a = Number(prompt('Введите число'));
-
-//     // if (a > 0){
-//     //     alert('Число положительное');
-//     // }else{
-//     //     alert('Число отрицательное');
-//     // }
-//     if (a > 0){ //Условие выполнения
-//         alert('Число положительное'); //Если условие истинно
-//     }else if (a < 0){ // Дополнительное условие
-//         alert('Число отрицательное');
-//     }else{ // Если ни одно условие не дало истинного результата
-//         alert('Вы ввели 0');
-//     }
-// }
-
-// {
-//     let a = prompt();
-//     if (a){
-//         alert('В переменной есть значение' + a);
-//     }else{
-//         alert('Переменная пустая' + a);
-//     }
-
-//     // if (!a) return; 
-// }
-
-// {
-//     let a = prompt();
-
-//     switch (a) {
-//         case '1':
-//             console.log(1);
-//             break;
-//         case '2':
-//             console.log(2);
-//             break;
-//         case '3':
-//             console.log(3);
-//             break;
-//         case '4':
-//             console.log(4);
-//             break;
-//         case '5':
-//             console.log(5);
-//             break;
-//         default:
-//             console.log('Неизвестное число');
-//         // break;
-//     }
-// }
-
-// {
-//     // ? :
-//     let a = Number(prompt());
-
-//     let b = a > 0 ?
-//         'Число положительное' :
-//         a < 0 ?
-//             'Число отрицательное' :
-//             'Число равно 0';
-//     console.log(b);
-// }
-
-// {
-//     let a = +prompt('message');
-//     let b = +prompt();
-
-//     if (a > 0 && b > 0){
-//         console.log('Числа положительные');
-//     }else if (a > 0 && b < 0){
-//         console.log('Число a положительно, а число b отрицательно');
-//     }else if (a > 0 || b > 0){
-//         console.log('Одно из чисел положительно');
-//     }else {
-//         console.log("Числа отрицательные");
-//     }
-// }
-
-{
-    let str = 's';
-
-    console.log(str.repeat(100));
-}
+console.log(summ);
